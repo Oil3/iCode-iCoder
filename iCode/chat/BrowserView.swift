@@ -16,7 +16,11 @@ struct BrowserView: NSViewRepresentable {
     }
     
     func updateNSView(_ nsView: WKWebView, context: Context) {
-        let request = URLRequest(url: chatURL)
-        nsView.load(request)
+        if nsView.url == nil {
+            let request = URLRequest(url: URL(string: "https://chat.openai.com")!)
+            nsView.load(request)
+        }
     }
 }
+
+// BrowserContainerView to manage BrowserView
