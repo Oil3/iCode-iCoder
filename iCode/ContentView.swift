@@ -12,9 +12,7 @@ enum Category: String, CaseIterable, Identifiable {
     case chat
     case snippet
     case history
-    case profile
     case settings
-    case more
 
     var id: String { self.rawValue }
     
@@ -31,12 +29,8 @@ enum Category: String, CaseIterable, Identifiable {
             return "note.text"
         case .history:
             return "clock"
-        case .profile:
-            return "person.crop.circle"
         case .settings:
             return "gear"
-        case .more:
-            return "ellipsis.circle"
         }
     }
 }
@@ -49,6 +43,9 @@ struct ContentView: View {
         NavigationSplitView {
             // Sidebar content
             List(selection: $selectedCategory) {
+                        Spacer()
+                        
+
                 ForEach(Category.allCases) { category in
                     Label(category.localizedName, systemImage: category.systemIconName)
                         .tag(category)
@@ -59,22 +56,14 @@ struct ContentView: View {
             Group {
                 switch selectedCategory {
                 case .chat:
-                    // Your chat view goes here
-                    Text("Chat View")
+                    BrowserView()
                 case .snippet:
                     SnippetView()
                 case .history:
                     // Your history view goes here
                     Text("History View")
-                case .profile:
-                    // Your profile view goes here
-                    Text("Profile View")
                 case .settings:
-                    // Your settings view goes here
-                    Text("Settings View")
-                case .more:
-                    // Your more view goes here
-                    Text("More View")
+                    PreferencesView()
                 default:
                     Text("Select a category")
                 }

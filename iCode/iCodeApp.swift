@@ -15,8 +15,8 @@ struct iCodeApp: App {
         }
 //        #if os(macOS)
 //        .commands {
-//            SidebarCommands()
-//        }
+//          SidebarCommands()
+//       }
 //        #endif
     }
 }
