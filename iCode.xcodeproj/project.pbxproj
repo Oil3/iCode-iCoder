@@ -19,8 +19,6 @@
 
 /* Begin PBXFileReference section */
 		728DDE0B2B8169AC00CA98DA /* iCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		728DDE0E2B8169AC00CA98DA /* oldiCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oldiCodeApp.swift; sourceTree = "<group>"; };
-		728DDE102B8169AC00CA98DA /* oldContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oldContentView.swift; sourceTree = "<group>"; };
 		728DDE122B8169AC00CA98DA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		728DDE142B8169AD00CA98DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		728DDE162B8169AD00CA98DA /* iCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iCode.entitlements; sourceTree = "<group>"; };
@@ -71,8 +69,6 @@
 				72BF16B72B8179F20032B334 /* WebView.swift */,
 				728DDE142B8169AD00CA98DA /* Assets.xcassets */,
 				728DDE162B8169AD00CA98DA /* iCode.entitlements */,
-				728DDE102B8169AC00CA98DA /* oldContentView.swift */,
-				728DDE0E2B8169AC00CA98DA /* oldiCodeApp.swift */,
 				728DDE172B8169AD00CA98DA /* Preview Content */,
 			);
 			path = iCode;

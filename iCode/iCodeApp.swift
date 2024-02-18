@@ -13,5 +13,10 @@ struct iCodeApp: App {
             WindowGroup {
                 ContentView(isSidePanelVisible: .constant(true))
         }
+        #if os(macOS)
+        .commands {
+            SidebarCommands()
+        }
+        #endif
     }
 }
