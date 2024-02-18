@@ -7,44 +7,86 @@
 
 import SwiftUI
 
+// improvements with navigationsplitview
+enum Category: String, CaseIterable, Identifiable {
+    case chat
+    case snippet
+    case history
+    case profile
+    case settings
+    case more
+
+    var id: String { self.rawValue }
+    
+
+    var localizedName: LocalizedStringKey {
+        return LocalizedStringKey(rawValue.capitalized)
+    }
+
+    var systemIconName: String {
+        switch self {
+        case .chat:
+            return "text.bubble"
+        case .snippet:
+            return "note.text"
+        case .history:
+            return "clock"
+        case .profile:
+            return "person.crop.circle"
+        case .settings:
+            return "gear"
+        case .more:
+            return "ellipsis.circle"
+        }
+    }
+}
+
+// actual view
 struct ContentView: View {
     @State private var selectedCategory: Category? = .chat
-    @Binding var isSidePanelVisible: Bool
-
     
     var body: some View {
-        NavigationView {
-            SidePanelView(selectedCategory: $selectedCategory, isSidePanelVisible: .constant(true))
-            
-            // Main content view
+        NavigationSplitView {
+            // Sidebar content
+            List(selection: $selectedCategory) {
+                ForEach(Category.allCases) { category in
+                    Label(category.localizedName, systemImage: category.systemIconName)
+                        .tag(category)
+                }
+            }
+
+        } detail: {
             Group {
                 switch selectedCategory {
                 case .chat:
-                    // Replace with the URL of your chat
-                    BrowserView(url: URL(string: "https://example.com")!)
+                    // Your chat view goes here
+                    Text("Chat View")
                 case .snippet:
-                    // Your snippet view goes here
-                    Text("Snippet View")
+                    SnippetView()
                 case .history:
                     // Your history view goes here
                     Text("History View")
                 case .profile:
-                    // Replace with the URL of your profile page
-                    BrowserView(url: URL(string: "https://chat.openai.com")!)
+                    // Your profile view goes here
+                    Text("Profile View")
                 case .settings:
                     // Your settings view goes here
                     Text("Settings View")
                 case .more:
-                    // Your more traditional browser view goes here
-                    Text("More Browser View")
+                    // Your more view goes here
+                    Text("More View")
                 default:
                     Text("Select a category")
                 }
             }
-            .frame(minWidth: 400, idealWidth: 600, maxWidth: .infinity, minHeight: 300, idealHeight: 500, maxHeight: .infinity)
+//            .frame(minWidth: 400, idealWidth: 600, maxWidth: .infinity)
         }
     }
 }
-//#Preview {
-//    ContentView()
-//}
+
+// ContentView previews
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}

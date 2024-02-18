@@ -11,12 +11,12 @@ import SwiftUI
 struct iCodeApp: App {
     var body: some Scene {
             WindowGroup {
-                ContentView(isSidePanelVisible: .constant(true))
+                ContentView()
         }
-        #if os(macOS)
-        .commands {
-            SidebarCommands()
-        }
-        #endif
+//        #if os(macOS)
+//        .commands {
+//            SidebarCommands()
+//        }
+//        #endif
     }
 }

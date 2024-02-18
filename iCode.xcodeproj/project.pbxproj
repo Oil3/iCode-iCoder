@@ -7,27 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		728DDE132B8169AC00CA98DA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728DDE122B8169AC00CA98DA /* Category.swift */; };
 		728DDE152B8169AD00CA98DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 728DDE142B8169AD00CA98DA /* Assets.xcassets */; };
 		728DDE192B8169AD00CA98DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 728DDE182B8169AD00CA98DA /* Preview Assets.xcassets */; };
 		72BF16B82B8179F20032B334 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF16B72B8179F20032B334 /* WebView.swift */; };
-		72BF16BA2B817A2C0032B334 /* SidePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF16B92B817A2C0032B334 /* SidePanelView.swift */; };
 		72BF16BC2B817A6F0032B334 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF16BB2B817A6F0032B334 /* ContentView.swift */; };
 		72BF16BE2B817B0B0032B334 /* iCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF16BD2B817B0B0032B334 /* iCodeApp.swift */; };
 		72BF16C12B817B8E0032B334 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BF16C02B817B8E0032B334 /* WebKit.framework */; };
+		72BF16C82B81C4A30032B334 /* Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF16C72B81C4A30032B334 /* Snippet.swift */; };
+		72BF16CA2B81C4C10032B334 /* SnipptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF16C92B81C4C10032B334 /* SnipptViewModel.swift */; };
+		72BF16CC2B81C4D50032B334 /* SnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF16CB2B81C4D50032B334 /* SnippetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		728DDE0B2B8169AC00CA98DA /* iCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		728DDE122B8169AC00CA98DA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		728DDE142B8169AD00CA98DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		728DDE162B8169AD00CA98DA /* iCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iCode.entitlements; sourceTree = "<group>"; };
 		728DDE182B8169AD00CA98DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		72BF16B72B8179F20032B334 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		72BF16B92B817A2C0032B334 /* SidePanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidePanelView.swift; sourceTree = "<group>"; };
 		72BF16BB2B817A6F0032B334 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		72BF16BD2B817B0B0032B334 /* iCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCodeApp.swift; sourceTree = "<group>"; };
 		72BF16C02B817B8E0032B334 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		72BF16C72B81C4A30032B334 /* Snippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snippet.swift; sourceTree = "<group>"; };
+		72BF16C92B81C4C10032B334 /* SnipptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipptViewModel.swift; sourceTree = "<group>"; };
+		72BF16CB2B81C4D50032B334 /* SnippetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +64,9 @@
 		728DDE0D2B8169AC00CA98DA /* iCode */ = {
 			isa = PBXGroup;
 			children = (
+				72BF16C62B81C4510032B334 /* snippets */,
 				72BF16BD2B817B0B0032B334 /* iCodeApp.swift */,
 				72BF16BB2B817A6F0032B334 /* ContentView.swift */,
-				72BF16B92B817A2C0032B334 /* SidePanelView.swift */,
-				728DDE122B8169AC00CA98DA /* Category.swift */,
 				72BF16B72B8179F20032B334 /* WebView.swift */,
 				728DDE142B8169AD00CA98DA /* Assets.xcassets */,
 				728DDE162B8169AD00CA98DA /* iCode.entitlements */,
@@ -88,6 +89,16 @@
 				72BF16C02B817B8E0032B334 /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72BF16C62B81C4510032B334 /* snippets */ = {
+			isa = PBXGroup;
+			children = (
+				72BF16C72B81C4A30032B334 /* Snippet.swift */,
+				72BF16C92B81C4C10032B334 /* SnipptViewModel.swift */,
+				72BF16CB2B81C4D50032B334 /* SnippetView.swift */,
+			);
+			path = snippets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,8 +174,9 @@
 				72BF16BE2B817B0B0032B334 /* iCodeApp.swift in Sources */,
 				72BF16B82B8179F20032B334 /* WebView.swift in Sources */,
 				72BF16BC2B817A6F0032B334 /* ContentView.swift in Sources */,
-				728DDE132B8169AC00CA98DA /* Category.swift in Sources */,
-				72BF16BA2B817A2C0032B334 /* SidePanelView.swift in Sources */,
+				72BF16C82B81C4A30032B334 /* Snippet.swift in Sources */,
+				72BF16CC2B81C4D50032B334 /* SnippetView.swift in Sources */,
+				72BF16CA2B81C4C10032B334 /* SnipptViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
