@@ -16,15 +16,15 @@ struct SnippetView: View {
             List {
                 ForEach(viewModel.snippets) { snippet in
                     HStack {
-                        Image(systemName: "person.fill") // Icon for the "human"
-                            .padding()
+//                        Image(systemName: "person.fill") // Icon for the "human"
+//                            .padding()
                         VStack(alignment: .leading) {
 //                            Text("Human") // Probably useless, takes space
 //                                .foregroundColor(.gray)
                             Text(snippet.content)
-                                .padding()
+                                .font(.custom("SF Mono", size: 14))
                             Text("\(snippet.timestamp, formatter: itemFormatter)")
-                                .font(.caption)
+                                .font(.custom("SF Mono", size:10))
                                 .foregroundColor(.gray)
                         }
                     }
@@ -59,8 +59,3 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
-struct SnippetView_Previews: PreviewProvider {
-    static var previews: some View {
-        SnippetView()
-    }
-}

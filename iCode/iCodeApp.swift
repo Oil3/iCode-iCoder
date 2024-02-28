@@ -11,12 +11,7 @@ import SwiftUI
 struct iCodeApp: App {
     var body: some Scene {
             WindowGroup {
-                ContentView()
-        }
-//        #if os(macOS)
-//        .commands {
-//          SidebarCommands()
-//       }
-//        #endif
+            ContentView()
+        } 
     }
 }
