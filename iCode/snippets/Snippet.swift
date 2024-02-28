@@ -19,4 +19,4 @@ struct Snippet: Identifiable, Codable {
         self.timestamp = timestamp
         self.isUser = isUser
     }
-}
+}       
