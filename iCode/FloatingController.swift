@@ -1,30 +1,34 @@
-///ZZZ
-//quite the rollercoaster to have it borderless, floating, and interactive. Not borderless = 0 issue. Might need to have it as an option 
+//
+//  floating window
+//  iCode
+//
+//  Created by ZZS on 18/02/2024.
+    //
+
 import AppKit
 import WebKit
-import Foundation
 
 class FloatingController: NSWindowController {
     static let shared = FloatingController()
-    var floatingWindow: NSWindow?
-
+    
+    private var floatingWindow: NSWindow?
+       
     func showFloatingWindow() {
         if floatingWindow == nil {
             let webView = WKWebView()
             webView.load(URLRequest(url: URL(string: "https://chat.openai.com")!))
 
-            let contentRect = NSRect(x: 0, y: 0, width: 480, height: 800)
-            floatingWindow = NSWindow(contentRect: contentRect, styleMask: [.titled, .closable, .miniaturizable, .resizable], backing: .buffered, defer: false)
-            floatingWindow?.contentViewController = NSViewController()
-            floatingWindow?.contentViewController?.view = webView
+            let contentRect = NSRect(x: 0, y: 0, width: 480, height: 300)
+            floatingWindow = CustomFloatingWindow(contentRect: contentRect, styleMask: [.fullSizeContentView, .closable, .miniaturizable, .resizable, .unifiedTitleAndToolbar, ], backing: .buffered, defer: false)
+            floatingWindow?.contentView = webView
+//            floatingWindow?.
             floatingWindow?.level = .floating
-            floatingWindow?.backgroundColor = .black
-            floatingWindow?.isMovableByWindowBackground = true
-            floatingWindow?.title = "Floating Window"
-
-            self.window = floatingWindow // Ensure the NSWindowController manages the floatingWindow
-        }
-        floatingWindow?.makeKeyAndOrderFront(nil)
+            floatingWindow?.titlebarAppearsTransparent = true
+            floatingWindow?.isMovable = true
+//            floatingWindow?.isMovableByWindowBackground = true
+            } else {
+            floatingWindow?.canHide = true
+        }            
     }
+    
 }
-
