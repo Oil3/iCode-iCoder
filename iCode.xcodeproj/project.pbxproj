@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		725DEA452B8F73FF009E330D /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725DEA442B8F73FF009E330D /* SafariServices.framework */; };
+		725A2F3F2B8F95BE001DA36D /* DraggableWebViewWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A2F3E2B8F95BE001DA36D /* DraggableWebViewWindow.swift */; };
 		728DDE152B8169AD00CA98DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 728DDE142B8169AD00CA98DA /* Assets.xcassets */; };
 		728DDE192B8169AD00CA98DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 728DDE182B8169AD00CA98DA /* Preview Assets.xcassets */; };
 		72B0B7372B826DB300B1F68B /* BrowserContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B0B7362B826DB300B1F68B /* BrowserContainerView.swift */; };
@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		725DEA442B8F73FF009E330D /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/SafariServices.framework; sourceTree = DEVELOPER_DIR; };
+		725A2F3E2B8F95BE001DA36D /* DraggableWebViewWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableWebViewWindow.swift; sourceTree = "<group>"; };
 		728DDE0B2B8169AC00CA98DA /* iCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		728DDE142B8169AD00CA98DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		728DDE162B8169AD00CA98DA /* iCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iCode.entitlements; sourceTree = "<group>"; };
@@ -48,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				725DEA452B8F73FF009E330D /* SafariServices.framework in Frameworks */,
 				72BF16C12B817B8E0032B334 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +55,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		728B72D22B90175E00A63974 /* unsorted */ = {
+			isa = PBXGroup;
+			children = (
+				72B0B7382B82746D00B1F68B /* Category.swift */,
+				725A2F3E2B8F95BE001DA36D /* DraggableWebViewWindow.swift */,
+			);
+			path = unsorted;
+			sourceTree = "<group>";
+		};
+		728B72D32B90178500A63974 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				72B0B7362B826DB300B1F68B /* BrowserContainerView.swift */,
+				72BF16B72B8179F20032B334 /* BrowserView.swift */,
+				72F0B2462B82030200D1A976 /* PreferencesView.swift */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
 		728DDE022B8169AC00CA98DA = {
 			isa = PBXGroup;
 			children = (
@@ -76,13 +94,13 @@
 		728DDE0D2B8169AC00CA98DA /* iCode */ = {
 			isa = PBXGroup;
 			children = (
+				728B72D22B90175E00A63974 /* unsorted */,
 				72B2D5FA2B84603700ACFDE3 /* Info.plist */,
-				72B0B7352B826B0A00B1F68B /* chat */,
+				728B72D32B90178500A63974 /* core */,
 				72BF16C62B81C4510032B334 /* snippets */,
+				72BF16BB2B817A6F0032B334 /* ContentView.swift */,
 				72BF16BD2B817B0B0032B334 /* iCodeApp.swift */,
-				72B0B7382B82746D00B1F68B /* Category.swift */,
 				72F0B2482B820C6800D1A976 /* FloatingController.swift */,
-				72F0B2462B82030200D1A976 /* PreferencesView.swift */,
 				728DDE142B8169AD00CA98DA /* Assets.xcassets */,
 				728DDE162B8169AD00CA98DA /* iCode.entitlements */,
 				728DDE172B8169AD00CA98DA /* Preview Content */,
@@ -98,19 +116,9 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		72B0B7352B826B0A00B1F68B /* chat */ = {
-			isa = PBXGroup;
-			children = (
-				72BF16B72B8179F20032B334 /* BrowserView.swift */,
-				72B0B7362B826DB300B1F68B /* BrowserContainerView.swift */,
-			);
-			path = chat;
-			sourceTree = "<group>";
-		};
 		72BF16BF2B817B8E0032B334 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				725DEA442B8F73FF009E330D /* SafariServices.framework */,
 				72BF16C02B817B8E0032B334 /* WebKit.framework */,
 			);
 			name = Frameworks;
@@ -122,7 +130,6 @@
 				72BF16C72B81C4A30032B334 /* Snippet.swift */,
 				72BF16C92B81C4C10032B334 /* SnippetViewModel.swift */,
 				72BF16CB2B81C4D50032B334 /* SnippetView.swift */,
-				72BF16BB2B817A6F0032B334 /* ContentView.swift */,
 			);
 			path = snippets;
 			sourceTree = "<group>";
@@ -200,6 +207,7 @@
 				72BF16BE2B817B0B0032B334 /* iCodeApp.swift in Sources */,
 				72B0B7392B82746D00B1F68B /* Category.swift in Sources */,
 				72BF16B82B8179F20032B334 /* BrowserView.swift in Sources */,
+				725A2F3F2B8F95BE001DA36D /* DraggableWebViewWindow.swift in Sources */,
 				72B0B7372B826DB300B1F68B /* BrowserContainerView.swift in Sources */,
 				72F0B2492B820C6800D1A976 /* FloatingController.swift in Sources */,
 				72BF16BC2B817A6F0032B334 /* ContentView.swift in Sources */,
