@@ -31,9 +31,30 @@ class FloatingController: NSWindowController {
             floatingWindow?.backgroundColor = NSColor.clear
             floatingWindow?.contentView = webView
             floatingWindow?.makeKeyAndOrderFront(nil)
+            floatingWindow?.level = .modalPanel           
+            //
+            
+            let accessoryVC = TitleBarAccessoryViewController()
+            accessoryVC.layoutAttribute = .right 
+            floatingWindow?.addTitlebarAccessoryViewController(accessoryVC) 
+//            // Create a titlebar accessory view controller with a button
+//            let accessoryViewController = NSTitlebarAccessoryViewController()
+//            accessoryViewController.layoutAttribute = .right
+//
+//            let button = NSButton(title: "X", target: nil, action: #selector(titleBarButtonClicked))
+//            button.bezelStyle = .circular
+//            accessoryViewController.view = NSView(frame: NSRect(x: 0, y: 0, width: 100, height: 20))
+//            accessoryViewController.view.addSubview(button)
+//            // Add the accessory view controller to the window
+//            floatingWindow?.addTitlebarAccessoryViewController(accessoryViewController)
+            //
             floatingWindow?.makeKeyAndOrderFront(nil) 
         } else {
             floatingWindow?.makeKey()
         }
+    }
+
+    @objc func titleBarButtonClicked() {
+        print("Title bar button clicked")
     }
 }
