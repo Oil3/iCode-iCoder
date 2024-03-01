@@ -8,7 +8,7 @@
 ////     window.addTitlebarAccessoryViewController(accessoryVC) 
 //  Created by ZZS on 29/02/2024.
 //
-import Foundation
+import AppKit
 
 class TitleBarAccessoryViewController: NSTitlebarAccessoryViewController {
 
@@ -42,10 +42,11 @@ class TitleBarAccessoryViewController: NSTitlebarAccessoryViewController {
         guard let window = view.window else { return }
 
         switch sender.tag {
-        case 1: // Close
-            window.performClose(sender)
-        case 2: // Minimize
-            window.performMiniaturize(sender)
+        case 1:
+            FloatingController.shared.toggleFloating()
+
+        case 2: 
+            FloatingController.shared.toggleAutoHide()
         case 3: // Maximize or Zoom
             window.performZoom(sender)
         default:
