@@ -8,7 +8,7 @@
 ////     window.addTitlebarAccessoryViewController(accessoryVC) 
 //  Created by ZZS on 29/02/2024.
 //
-import AppKit
+import Foundation
 
 class TitleBarAccessoryViewController: NSTitlebarAccessoryViewController {
 
