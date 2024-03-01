@@ -20,7 +20,7 @@
 		72BF16CC2B81C4D50032B334 /* SnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF16CB2B81C4D50032B334 /* SnippetView.swift */; };
 		72F0B2472B82030200D1A976 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0B2462B82030200D1A976 /* PreferencesView.swift */; };
 		72F0B2492B820C6800D1A976 /* FloatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0B2482B820C6800D1A976 /* FloatingController.swift */; };
-		72F917FA2B9138B100C80C25 /* TitleBarAccesorryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F917F92B9138B100C80C25 /* TitleBarAccesorryViewController.swift */; };
+		72F917FA2B9138B100C80C25 /* TitleBarAccessoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F917F92B9138B100C80C25 /* TitleBarAccessoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 		72BF16CB2B81C4D50032B334 /* SnippetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetView.swift; sourceTree = "<group>"; };
 		72F0B2462B82030200D1A976 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		72F0B2482B820C6800D1A976 /* FloatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingController.swift; sourceTree = "<group>"; };
-		72F917F92B9138B100C80C25 /* TitleBarAccesorryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarAccesorryViewController.swift; sourceTree = "<group>"; };
+		72F917F92B9138B100C80C25 /* TitleBarAccessoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarAccessoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 				72BF16BB2B817A6F0032B334 /* ContentView.swift */,
 				72BF16BD2B817B0B0032B334 /* iCodeApp.swift */,
 				72999F1B2B9069C300019082 /* TitleBarButtons.swift */,
-				72F917F92B9138B100C80C25 /* TitleBarAccesorryViewController.swift */,
+				72F917F92B9138B100C80C25 /* TitleBarAccessoryViewController.swift */,
 				728DDE142B8169AD00CA98DA /* Assets.xcassets */,
 				728DDE162B8169AD00CA98DA /* iCode.entitlements */,
 			);
@@ -176,7 +176,7 @@
 				72BF16B82B8179F20032B334 /* BrowserView.swift in Sources */,
 				72B0B7372B826DB300B1F68B /* BrowserContainerView.swift in Sources */,
 				72F0B2492B820C6800D1A976 /* FloatingController.swift in Sources */,
-				72F917FA2B9138B100C80C25 /* TitleBarAccesorryViewController.swift in Sources */,
+				72F917FA2B9138B100C80C25 /* TitleBarAccessoryViewController.swift in Sources */,
 				72BF16BC2B817A6F0032B334 /* ContentView.swift in Sources */,
 				72BF16C82B81C4A30032B334 /* Snippet.swift in Sources */,
 				72BF16CC2B81C4D50032B334 /* SnippetView.swift in Sources */,

@@ -7,54 +7,40 @@ import AppKit
 import WebKit
 
 class BorderlessDrag: NSWindow {
-override var canBecomeKey: Bool { return true }
-override var canBecomeMain: Bool { return true }
-}
+    override var canBecomeKey: Bool { return true }
+    override var canBecomeMain: Bool { return true }
+    }
 
-class FloatingController: NSWindowController {
+class FloatingController: NSWindowController, NSWindowDelegate {
     static let shared = FloatingController()
-
     public var floatingWindow: BorderlessDrag?
+    
+    private let floatingSymbolName = "pin.fill" // Symbol when the window is floating
+    private let notFloatingSymbolName = "pin.slash.fill" // Symbol when the window is not floating
 
     func showFloatingWindow() {
-        if floatingWindow == nil {
+       if floatingWindow == nil {
             let webView = WKWebView()
             webView.load(URLRequest(url: URL(string: "https://chat.com")!))
             webView.allowsMagnification = true
             webView.allowsBackForwardNavigationGestures = true
-            webView.pageZoom = (0.9)
+            webView.pageZoom = (0.8)
             
             let contentRect = NSRect(x: 1250, y: 400, width: 400, height: 647)
             floatingWindow = BorderlessDrag(contentRect: contentRect, styleMask: [.titled, .closable, .miniaturizable, .resizable], backing: .buffered, defer: false)
-            floatingWindow?.level = .floating               
-            floatingWindow?.minSize = NSSize(width: 50, height: 50)
+            floatingWindow?.minSize = NSSize(width: 100, height: 0)
             floatingWindow?.backgroundColor = NSColor.clear
             floatingWindow?.contentView = webView
-            floatingWindow?.makeKeyAndOrderFront(nil)
-            floatingWindow?.level = .modalPanel           
-            //
-            
+            floatingWindow?.hasShadow = false
+            floatingWindow?.delegate = self
+            floatingWindow?.level = .floating 
             let accessoryVC = TitleBarAccessoryViewController()
-            accessoryVC.layoutAttribute = .right 
-            floatingWindow?.addTitlebarAccessoryViewController(accessoryVC) 
-//            // Create a titlebar accessory view controller with a button
-//            let accessoryViewController = NSTitlebarAccessoryViewController()
-//            accessoryViewController.layoutAttribute = .right
-//
-//            let button = NSButton(title: "X", target: nil, action: #selector(titleBarButtonClicked))
-//            button.bezelStyle = .circular
-//            accessoryViewController.view = NSView(frame: NSRect(x: 0, y: 0, width: 100, height: 20))
-//            accessoryViewController.view.addSubview(button)
-//            // Add the accessory view controller to the window
-//            floatingWindow?.addTitlebarAccessoryViewController(accessoryViewController)
-            //
-            floatingWindow?.makeKeyAndOrderFront(nil) 
+            accessoryVC.layoutAttribute = .right
+            floatingWindow?.addTitlebarAccessoryViewController(accessoryVC)
         } else {
-            floatingWindow?.makeKey()
-        }
-    }
-
-    @objc func titleBarButtonClicked() {
-        print("Title bar button clicked")
-    }
-}
+            floatingWindow?.makeKeyAndOrderFront(nil)
+}}   
+        func windowShouldClose(_ sender: NSWindow) -> Bool {
+        floatingWindow?.orderOut(nil) // This to ensure content is not lost within the session
+        return false 
+}}
