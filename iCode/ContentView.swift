@@ -9,14 +9,16 @@ import WebKit
 
 struct ContentView: View {
     @State private var isWindowOpen = false
+    @State private var searchText = ""
+
 
     var body: some View {
         NavigationSplitView {
             SnippetView()
         } detail: {
-            BrowserView()
+            BrowserView(searchText: $searchText)
             }
-                       
+        .searchable(text: $searchText) // Adds a search field.
         .toolbar {
             ToolbarItem(placement: .automatic) {
                 Button(action: {

@@ -10,10 +10,16 @@ class TitleBarButtons: NSTitlebarAccessoryViewController {
     // Maintain direct references to the buttons
     private var toggleButton: NSButton!
     private var autoHideButton: NSButton!
+    private var searchText: NSSearchField!
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //Search init
+        searchText = NSSearchField(frame: .zero)
+        searchText.placeholderString = "Search"
+
         // Initialize the toggle button with an SF Symbol
         toggleButton = NSButton(image: NSImage(systemSymbolName: "pin", accessibilityDescription: nil)!, target: self, action: #selector(toggleFloating))
         toggleButton.bezelStyle = .texturedRounded
@@ -24,10 +30,12 @@ class TitleBarButtons: NSTitlebarAccessoryViewController {
         autoHideButton.bezelStyle = .texturedRounded
         autoHideButton.isBordered = false
         
-        // Set up the view to contain the buttons
+        // Set up the view to contain it all
         self.view = NSView(frame: NSRect(x: 0, y: 0, width: 60, height: 26))
         self.view.addSubview(toggleButton)
         self.view.addSubview(autoHideButton)
+        self.view.addSubview(searchText)
+
         
         // Position the buttons within the view
         toggleButton.frame = NSRect(x: 0, y: 0, width: 30, height: 26)
@@ -47,12 +55,11 @@ class TitleBarButtons: NSTitlebarAccessoryViewController {
     }
     
     func updateButtonAppearance() {
-    // Update the toggle button appearance based on the floating state
-    let toggleButtonImageName = (FloatingController.shared.floatingWindow?.level == .floating) ? "pin.fill" : "pin.slash.fill"
-    toggleButton.image = NSImage(systemSymbolName: toggleButtonImageName, accessibilityDescription: nil)
 
-    // Update the auto-hide button appearance based on the auto-hide state
+        let toggleButtonImageName = (FloatingController.shared.floatingWindow?.level == .floating) ? "pin.fill" : "pin.slash.fill"
+        toggleButton.image = NSImage(systemSymbolName: toggleButtonImageName, accessibilityDescription: nil)
+        
         let autoHideButtonImageName = (FloatingController.shared.isAutoHideEnabled) ? "eye.slash.rfill" : "eye.fill"
-autoHideButton.image = NSImage(systemSymbolName: autoHideButtonImageName, accessibilityDescription: nil)
+        autoHideButton.image = NSImage(systemSymbolName: autoHideButtonImageName, accessibilityDescription: nil)
 }}
 

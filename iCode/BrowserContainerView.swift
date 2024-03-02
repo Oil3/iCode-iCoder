@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct BrowserContainerView: View {
+    @Binding var searchText: String
+
     var body: some View {
-        BrowserView()
+
+        BrowserView(searchText: $searchText)
     }
 }
