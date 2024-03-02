@@ -26,7 +26,6 @@ class TitleBarButtons: NSTitlebarAccessoryViewController {
         searchText.placeholderString = "Search"
         searchText.target = self
         searchText.action = #selector(searchTextDidChange(_:))
-
         // Initialize the toggle button with an SF Symbol
         toggleButton = NSButton(image: NSImage(systemSymbolName: "pin", accessibilityDescription: nil)!, target: self, action: #selector(toggleFloating))
         toggleButton.bezelStyle = .texturedRounded

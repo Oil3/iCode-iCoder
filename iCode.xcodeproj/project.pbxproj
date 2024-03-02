@@ -10,7 +10,7 @@
 		728DDE152B8169AD00CA98DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 728DDE142B8169AD00CA98DA /* Assets.xcassets */; };
 		72999F1C2B9069C300019082 /* TitleBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72999F1B2B9069C300019082 /* TitleBarButtons.swift */; };
 		72B0B7372B826DB300B1F68B /* BrowserContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B0B7362B826DB300B1F68B /* BrowserContainerView.swift */; };
-		72B0B7392B82746D00B1F68B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B0B7382B82746D00B1F68B /* Category.swift */; };
+		72B0B7392B82746D00B1F68B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B0B7382B82746D00B1F68B /* DashboardView.swift */; };
 		72BF16B82B8179F20032B334 /* BrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF16B72B8179F20032B334 /* BrowserView.swift */; };
 		72BF16BC2B817A6F0032B334 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF16BB2B817A6F0032B334 /* ContentView.swift */; };
 		72BF16BE2B817B0B0032B334 /* iCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF16BD2B817B0B0032B334 /* iCodeApp.swift */; };
@@ -30,7 +30,7 @@
 		728DDE162B8169AD00CA98DA /* iCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = iCode.entitlements; path = iCode/iCode.entitlements; sourceTree = SOURCE_ROOT; };
 		72999F1B2B9069C300019082 /* TitleBarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarButtons.swift; sourceTree = "<group>"; };
 		72B0B7362B826DB300B1F68B /* BrowserContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserContainerView.swift; sourceTree = "<group>"; };
-		72B0B7382B82746D00B1F68B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		72B0B7382B82746D00B1F68B /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		72B2D5FA2B84603700ACFDE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		72BF16B72B8179F20032B334 /* BrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserView.swift; sourceTree = "<group>"; };
 		72BF16BB2B817A6F0032B334 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 				72BF16C72B81C4A30032B334 /* Snippet.swift */,
 				72BF16C92B81C4C10032B334 /* SnippetViewModel.swift */,
 				72BF16CB2B81C4D50032B334 /* SnippetView.swift */,
-				72B0B7382B82746D00B1F68B /* Category.swift */,
+				72B0B7382B82746D00B1F68B /* DashboardView.swift */,
 				72F0B2462B82030200D1A976 /* PreferencesView.swift */,
 				72B0B7362B826DB300B1F68B /* BrowserContainerView.swift */,
 				72BF16B72B8179F20032B334 /* BrowserView.swift */,
@@ -174,7 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72BF16BE2B817B0B0032B334 /* iCodeApp.swift in Sources */,
-				72B0B7392B82746D00B1F68B /* Category.swift in Sources */,
+				72B0B7392B82746D00B1F68B /* DashboardView.swift in Sources */,
 				72BF16B82B8179F20032B334 /* BrowserView.swift in Sources */,
 				72B0B7372B826DB300B1F68B /* BrowserContainerView.swift in Sources */,
 				72F0B2492B820C6800D1A976 /* FloatingController.swift in Sources */,
@@ -321,6 +321,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = iCoder;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "2024 © Quet Almahdi Morris";
+				INFOPLIST_KEY_NSMainNibFile = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -364,6 +365,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = iCoder;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "2024 © Quet Almahdi Morris";
+				INFOPLIST_KEY_NSMainNibFile = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

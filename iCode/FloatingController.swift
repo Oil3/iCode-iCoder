@@ -41,13 +41,13 @@ class FloatingController: NSWindowController, NSWindowDelegate {
             accessoryVC.floatingController = self
             floatingWindow?.addTitlebarAccessoryViewController(accessoryVC)
             FloatingController.shared.titleBarButtons = accessoryVC
-            
+            floatingWindow?.makeKeyAndOrderFront(nil)
         } else {
             floatingWindow?.makeKeyAndOrderFront(nil)
         }
     }
     
-    func windowShouldClose(_ sender: NSWindow) -> Bool {
+    func windowShouldClose(_ sender: NSWindow) -> Bool { //hiding the view of floating window to keep data has to be a  choice, it allows instant reopening but keeps in memory
         floatingWindow?.orderOut(nil)
         return false
     }
@@ -56,13 +56,12 @@ class FloatingController: NSWindowController, NSWindowDelegate {
             window.level = (window.level == .floating) ? .normal : .floating
 }}
     func toggleAutoHide() {
-        isAutoHideEnabled.toggle()
+        isAutoHideEnabled.toggle() //this started as autohide but it was a mess, the alpha levels need be configurable, and with option to back to 1.0 on mouse hover
         floatingWindow?.animator().alphaValue = isAutoHideEnabled ? 0.3 : 1.0
         titleBarButtons?.updateButtonAppearance() 
     }
     func performSearch(with searchText: String) {
         guard let webView = floatingWindow?.contentView as? WKWebView else { return }
-
         if !searchText.isEmpty {
             let findConfiguration = WKFindConfiguration()
             findConfiguration.caseSensitive = false
@@ -72,8 +71,8 @@ class FloatingController: NSWindowController, NSWindowDelegate {
                 print("Matches found: \(result)")
         }
     }
-}    
-    
+
+}  
     func closeFloatingWindow() {
         floatingWindow?.close()
         floatingWindow = nil
