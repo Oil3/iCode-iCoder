@@ -1,37 +1,31 @@
-//
-//  WebView.swift
-//  iCode
-//
-//  Created by ZZS on 17/02/2024.
-//
+
 import SwiftUI
 import WebKit
 
 struct BrowserView: NSViewRepresentable {
-    // Hardcoded URL
-    let chatURL = URL(string: "https://chat.openai.com")!
+    @Binding var url: URL // Now dynamic
     @Binding var searchText: String
 
-    
     func makeNSView(context: Context) -> WKWebView {
-        return WKWebView()
+        let webView = WKWebView()
+        return webView
     }
     
     func updateNSView(_ nsView: WKWebView, context: Context) {
-        if nsView.url == nil {
-            let request = URLRequest(url: chatURL)
+        // Load the URL if it's not already loaded
+        if nsView.url?.absoluteString != url.absoluteString {
+            let request = URLRequest(url: url)
             nsView.load(request)
-            }
+        }
                 
+        // Search functionality
         if !searchText.isEmpty {    
             let findConfiguration = WKFindConfiguration()
             findConfiguration.caseSensitive = false
             findConfiguration.wraps = true
             nsView.find(searchText, configuration: findConfiguration) { result in
-                // Handle the results of the search
                 print("Matches found: \(result)")
             }
+        }
     }
-}}
-
-// BrowserContainerView to manage BrowserView
+}

@@ -1,9 +1,3 @@
-//
-//  SnipptViewModel.swift
-//  iCode
-//
-//  Created by ZZS on 17/02/2024.
-//
 
 import Combine
 import Foundation

@@ -1,9 +1,3 @@
-//
-//  TitleBarButtons.swift
-//  iCode
-//
-//  Created by ZZS on 29/02/2024.
-//
 
 #if os(macOS)
 import AppKit

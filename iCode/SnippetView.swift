@@ -1,9 +1,3 @@
-//
-//  SnippetView.swift
-//  iCode
-//
-//  Created by ZZS on 17/02/2024.
-//
 
 import SwiftUI
 

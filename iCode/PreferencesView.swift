@@ -1,9 +1,4 @@
-//
-//  PreferencesView.swift
-//  iCode
-//
-//  Created by ZZS on 18/02/2024.
-//
+
 import SwiftUI
 import WebKit
 

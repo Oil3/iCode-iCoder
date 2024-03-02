@@ -1,31 +1,37 @@
-//
-//  ContentView.swift
-//  iCode
-//
-//  Created by ZZS on 17/02/2024.
-//
+
 import SwiftUI
 import WebKit
 
 struct ContentView: View {
-    @State private var isWindowOpen = false
+    @Binding var selectedURL: URL // Now dynamic
     @State private var searchText = ""
+    @State private var windowTransparency = 1.0
 
 
     var body: some View {
-        NavigationSplitView {
+    
+        TabView {
+            DashboardView(selectedURL: $selectedURL, windowTransparency: $windowTransparency)
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
             SnippetView()
-        } detail: {
-            BrowserView(searchText: $searchText)
+            .tabItem {
+                    Label("Snippets", systemImage: "list.bullet")
+                }
+            BrowserView(url: $selectedURL, searchText: $searchText )
+            .tabItem {
+                    Label("iCoder", systemImage: "globe")
             }
-        .searchable(text: $searchText) // Adds a search field.
+            .tabViewStyle(/*@START_MENU_TOKEN@*/DefaultTabViewStyle()/*@END_MENU_TOKEN@*/)
+                    }        .searchable(text: $searchText) // Adds a search field.
         .toolbar {
             ToolbarItem(placement: .automatic) {
                 Button(action: {
                         // Open the window when the button is clicked
                     FloatingController.shared.showFloatingWindow()                    }) {
                         Text("Floating")
-                    }
+                    }   
                 }
   }          }
             
