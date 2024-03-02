@@ -1,5 +1,5 @@
-
-//  iCode
+//iCode
+//  FloatingController is iCoder
 //
 //  Created by ZZS on 18/02/2024.
     //
@@ -12,6 +12,8 @@ class FloatingController: NSWindowController, NSWindowDelegate {
     public var floatingWindow: NSWindow?
     var titleBarButtons: TitleBarButtons? 
     var isAutoHideEnabled = false
+    var searchText: String = ""
+
     
 
     func showFloatingWindow() {
@@ -36,6 +38,7 @@ class FloatingController: NSWindowController, NSWindowDelegate {
             floatingWindow?.title = "iCoder"
             let accessoryVC = TitleBarButtons()
             accessoryVC.layoutAttribute = .right
+            accessoryVC.floatingController = self
             floatingWindow?.addTitlebarAccessoryViewController(accessoryVC)
             FloatingController.shared.titleBarButtons = accessoryVC
             
@@ -57,8 +60,19 @@ class FloatingController: NSWindowController, NSWindowDelegate {
         floatingWindow?.animator().alphaValue = isAutoHideEnabled ? 0.3 : 1.0
         titleBarButtons?.updateButtonAppearance() 
     }
-        
-    
+    func performSearch(with searchText: String) {
+        guard let webView = floatingWindow?.contentView as? WKWebView else { return }
+
+        if !searchText.isEmpty {
+            let findConfiguration = WKFindConfiguration()
+            findConfiguration.caseSensitive = false
+            findConfiguration.wraps = true
+            webView.find(searchText, configuration: findConfiguration) { result in
+                // Handle the results of the search
+                print("Matches found: \(result)")
+        }
+    }
+}    
     
     func closeFloatingWindow() {
         floatingWindow?.close()
