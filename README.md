@@ -1,7 +1,15 @@
-# iCode iCoder: your Seamless AI Assistant for macOS
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Oil3/iCode-iCoder/oil3/iCode/Assets.xcassets/AppIcon.appiconset/icon%20256.png" height="128">
+  <h1 align="center">iCode iCoder: Seamless AI Assistant for MacOS</h1>
+</p>
 
-Introducing iCode iCoder, the premier AI assistant designed for MacOS. 
-iCode and iCoder is a tool for power-users seeking unparalleled efficiency and reliability in their coding environment. It melds with their established workflow by providing a native and natural interface Coded in pure Swift with minimal Objective-C, iCode iCoder strictly follows Apple's guidelines and recommended practices, ensuring a seamless and secure experience with no external libraries nor frameworks, and require no privilege 
+
+
+Pre-release.
+Introducing iCode iCoder, the premier AI assistant designed for MacOS.  
+iCode and iCoder is designed for power-users seeking unparalleled efficiency and reliability in their coding environment. 
+Melds with established workflows with a native and natural interface coded in pure Swift -with minimal, standard, Objective-C functions.  
+iCode iCoder strictly follows Apple's guidelines and recommended practices for a seamless and secure experience with no external libraries nor frameworks, requires no privilege, is free of javascript.
 
 ## Core Features
 
@@ -33,8 +41,8 @@ With iCode, you can concentrate on what truly matters—your code, with the conf
 
 ## Screenshots
 
-![iCode Screenshot 1](path/to/screenshot1.png)
-![iCode Screenshot 2](path/to/screenshot2.png)
+placeholder![iCode Screenshot 1](path/to/screenshot1.png)
+placeholder![iCode Screenshot 2](path/to/screenshot2.png)
 
 ## Share your knowledge and expertise
 
@@ -47,3 +55,7 @@ version 1.1 - mar022024
 Our app does not collect any private data.
 
 version 1.1 - mar022024  
+
+<sub><sub>
+Before supporting us, give a coin to that old beggar you cross on the street, donate to Wikipedia or to Unesco, or... buy chromebooks for your nephews, give a bonus to your employees, get an umbrella for your cleaning lady, buy earrings for your mother, a usbc uberpowerful led flashlight for your dad, send flowers for your grandma, sportshoes for your grandpa, or something. In _Good_ we trust. </sub></sub>
+
