@@ -19,6 +19,7 @@
 		72BF16C82B81C4A30032B334 /* Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF16C72B81C4A30032B334 /* Snippet.swift */; };
 		72BF16CA2B81C4C10032B334 /* SnippetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF16C92B81C4C10032B334 /* SnippetViewModel.swift */; };
 		72BF16CC2B81C4D50032B334 /* SnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF16CB2B81C4D50032B334 /* SnippetView.swift */; };
+		72DB80182B94E2B40075CA26 /* WebDataCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DB80172B94E2B40075CA26 /* WebDataCleaner.swift */; };
 		72F0B2472B82030200D1A976 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0B2462B82030200D1A976 /* PreferencesView.swift */; };
 		72F0B2492B820C6800D1A976 /* FloatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0B2482B820C6800D1A976 /* FloatingController.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 		72BF16C72B81C4A30032B334 /* Snippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snippet.swift; sourceTree = "<group>"; };
 		72BF16C92B81C4C10032B334 /* SnippetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetViewModel.swift; sourceTree = "<group>"; };
 		72BF16CB2B81C4D50032B334 /* SnippetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetView.swift; sourceTree = "<group>"; };
+		72DB80172B94E2B40075CA26 /* WebDataCleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDataCleaner.swift; sourceTree = "<group>"; };
 		72F0B2462B82030200D1A976 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		72F0B2482B820C6800D1A976 /* FloatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,14 +82,15 @@
 				72BF16B72B8179F20032B334 /* BrowserView.swift */,
 				72F0B2482B820C6800D1A976 /* FloatingController.swift */,
 				72B0B7382B82746D00B1F68B /* DashboardView.swift */,
+				72DB80172B94E2B40075CA26 /* WebDataCleaner.swift */,
 				72999F1B2B9069C300019082 /* TitleBarButtons.swift */,
 				72BF16C72B81C4A30032B334 /* Snippet.swift */,
 				72BF16C92B81C4C10032B334 /* SnippetViewModel.swift */,
 				72BF16CB2B81C4D50032B334 /* SnippetView.swift */,
 				72F0B2462B82030200D1A976 /* PreferencesView.swift */,
 				72B0B7362B826DB300B1F68B /* BrowserContainerView.swift */,
-				72B2D5FA2B84603700ACFDE3 /* Info.plist */,
 				72BF16BD2B817B0B0032B334 /* iCodeApp.swift */,
+				72B2D5FA2B84603700ACFDE3 /* Info.plist */,
 				728DDE142B8169AD00CA98DA /* Assets.xcassets */,
 				728DDE162B8169AD00CA98DA /* iCode.entitlements */,
 			);
@@ -181,6 +184,7 @@
 				72BF16C82B81C4A30032B334 /* Snippet.swift in Sources */,
 				72BF16CC2B81C4D50032B334 /* SnippetView.swift in Sources */,
 				72BF16CA2B81C4C10032B334 /* SnippetViewModel.swift in Sources */,
+				72DB80182B94E2B40075CA26 /* WebDataCleaner.swift in Sources */,
 				72999F1C2B9069C300019082 /* TitleBarButtons.swift in Sources */,
 				72F0B2472B82030200D1A976 /* PreferencesView.swift in Sources */,
 			);
@@ -222,7 +226,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -242,6 +246,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -283,7 +288,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -297,6 +302,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -310,13 +316,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = iCode/iCode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 46WUYUUA8V;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iCode/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = iCoder;
+				INFOPLIST_KEY_CFBundleDisplayName = "iCode iCoder";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "2024 © Quet Almahdi Morris";
 				INFOPLIST_KEY_NSMainNibFile = "";
@@ -334,16 +340,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oil3.iCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -354,13 +359,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = iCode/iCode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 46WUYUUA8V;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iCode/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = iCoder;
+				INFOPLIST_KEY_CFBundleDisplayName = "iCode iCoder";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "2024 © Quet Almahdi Morris";
 				INFOPLIST_KEY_NSMainNibFile = "";
@@ -378,16 +383,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oil3.iCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

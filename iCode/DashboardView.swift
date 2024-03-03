@@ -1,5 +1,4 @@
 
-
 import SwiftUI
 
 struct DashboardView: View {
@@ -23,6 +22,16 @@ struct DashboardView: View {
                 Slider(value: $windowTransparency, in: 0.1...1.0, step: 0.1) {
                     Text("Window Transparency")
                 }
+                Button("Clear Cookies") {
+                    WebDataCleaner.clearCookies {
+                        print("Cookies cleared.")
+                    }
+                }
+                Button("Clear All Data") {
+                    WebDataCleaner.clearAllData {
+                        print("All website data cleared.")
+                    }
+                }.padding(.top, 5) // Add padding for visual separation
             }
             Section(header: Text("About")) {
                 Text("App version: 1.0.0")

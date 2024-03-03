@@ -8,7 +8,7 @@
         
         var body: some View {
             VStack {
-                Text("Welcome to iCode, iCoder!")
+                Text("      ")
                     .font(.headline)
                     .padding()
 

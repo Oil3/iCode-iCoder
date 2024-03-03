@@ -11,8 +11,10 @@ class FloatingController: NSWindowController, NSWindowDelegate {
     static let shared = FloatingController()
     public var floatingWindow: NSWindow?
     var titleBarButtons: TitleBarButtons? 
-    var isAutoHideEnabled = false
-    var searchText: String = ""
+    var isTransparencyEnabled = false
+    public var searchText: String = ""
+
+
 
     
 
@@ -55,26 +57,27 @@ class FloatingController: NSWindowController, NSWindowDelegate {
         if let window = floatingWindow {
             window.level = (window.level == .floating) ? .normal : .floating
 }}
-    func toggleAutoHide() {
-        isAutoHideEnabled.toggle() //this started as autohide but it was a mess, the alpha levels need be configurable, and with option to back to 1.0 on mouse hover
-        floatingWindow?.animator().alphaValue = isAutoHideEnabled ? 0.3 : 1.0
+    func toggleTransparency() {
+        isTransparencyEnabled.toggle() //this started as autohide but it was a mess, the alpha levels need be configurable, and with option to back to 1.0 on mouse hover
+        floatingWindow?.animator().alphaValue = isTransparencyEnabled ? 0.5 : 1.0
         titleBarButtons?.updateButtonAppearance() 
     }
     func performSearch(with searchText: String) {
         guard let webView = floatingWindow?.contentView as? WKWebView else { return }
         if !searchText.isEmpty {
-            let findConfiguration = WKFindConfiguration()
-            findConfiguration.caseSensitive = false
-            findConfiguration.wraps = true
-            webView.find(searchText, configuration: findConfiguration) { result in
-                // Handle the results of the search
-                print("Matches found: \(result)")
+            webView.find(searchText) { result in
+                if result.matchFound {
+                    print("Match found") //this really to debug
+                } else {
+                    print("Not found") //this really to debug
+            }
         }
     }
-
-}  
-    func closeFloatingWindow() {
+}
+    
+    func closeFloatingWindow() { //maybe we remove that, idea is for ensuring no data loss, but it means te winow is not closed
         floatingWindow?.close()
         floatingWindow = nil
     }
 } 
+

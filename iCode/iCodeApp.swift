@@ -11,20 +11,20 @@ struct iCodeApp: App {
         }
         .commands {
             CommandGroup(after: .textEditing) {
-                Menu("Find") {
-                    Button("Find...") {
-                        // Implement find action
-                        //FloatingController.shared.performSearch(with: FloatingController.shared.searchText)
+                    Button("Find... ") {
+                        FloatingController.shared.titleBarButtons?.searchText.becomeFirstResponder()
                     }
                     .keyboardShortcut("f", modifiers: .command)
 
                     Button("Find Next") {
-                        // Implement find next action
-                    }
+                        if let searchText = FloatingController.shared.titleBarButtons?.searchText.stringValue {
+                            FloatingController.shared.performSearch(with: searchText)
+
+                    }}
                     .keyboardShortcut("g", modifiers: .command)
-                }
+                
             }
         }
-    }
-}
+    
+}}
 

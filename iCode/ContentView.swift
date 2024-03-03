@@ -24,13 +24,14 @@ struct ContentView: View {
                     Label("iCoder", systemImage: "globe")
             }
             .tabViewStyle(/*@START_MENU_TOKEN@*/DefaultTabViewStyle()/*@END_MENU_TOKEN@*/)
-                    }        .searchable(text: $searchText) // Adds a search field.
+                    } 
+//            .searchable(text: $searchText) // search field 
         .toolbar {
             ToolbarItem(placement: .automatic) {
                 Button(action: {
                         // Open the window when the button is clicked
                     FloatingController.shared.showFloatingWindow()                    }) {
-                        Text("Floating")
+                        Text("Launch iCoder assistant")
                     }   
                 }
   }          }
