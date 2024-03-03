@@ -29,8 +29,7 @@ class FloatingController: NSWindowController, NSWindowDelegate {
             
             let contentRect = NSRect(x: 1250, y: 400, width: 400, height: 647)
             floatingWindow = NSWindow(contentRect: contentRect, styleMask: [.titled, .closable, .miniaturizable, .resizable], backing: .buffered, defer: false)
-            floatingWindow?.minSize = NSSize(width: 100, height: 0)
-            floatingWindow?.isMovableByWindowBackground = true
+            floatingWindow?.backgroundColor = NSColor.black
             floatingWindow?.contentView = webView
             floatingWindow?.hasShadow = false
             floatingWindow?.titlebarSeparatorStyle = .none

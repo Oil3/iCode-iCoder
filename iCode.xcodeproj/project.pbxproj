@@ -79,7 +79,6 @@
 			children = (
 				72BF16BB2B817A6F0032B334 /* ContentView.swift */,
 				7209FFB92B93DFED00E75FA2 /* FirstView.swift */,
-				72BF16B72B8179F20032B334 /* BrowserView.swift */,
 				72F0B2482B820C6800D1A976 /* FloatingController.swift */,
 				72B0B7382B82746D00B1F68B /* DashboardView.swift */,
 				72DB80172B94E2B40075CA26 /* WebDataCleaner.swift */,
@@ -88,11 +87,12 @@
 				72BF16C92B81C4C10032B334 /* SnippetViewModel.swift */,
 				72BF16CB2B81C4D50032B334 /* SnippetView.swift */,
 				72F0B2462B82030200D1A976 /* PreferencesView.swift */,
-				72B0B7362B826DB300B1F68B /* BrowserContainerView.swift */,
 				72BF16BD2B817B0B0032B334 /* iCodeApp.swift */,
 				72B2D5FA2B84603700ACFDE3 /* Info.plist */,
 				728DDE142B8169AD00CA98DA /* Assets.xcassets */,
 				728DDE162B8169AD00CA98DA /* iCode.entitlements */,
+				72BF16B72B8179F20032B334 /* BrowserView.swift */,
+				72B0B7362B826DB300B1F68B /* BrowserContainerView.swift */,
 			);
 			path = iCode;
 			sourceTree = SOURCE_ROOT;

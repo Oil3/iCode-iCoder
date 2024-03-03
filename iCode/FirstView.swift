@@ -1,6 +1,6 @@
     import SwiftUI
 
-    struct SwiftUIView: View {
+    struct FirstView: View {
 
         var osVersion: String {
             ProcessInfo.processInfo.operatingSystemVersionString
@@ -20,6 +20,6 @@
 
     struct SwiftUIView_Previews: PreviewProvider {
         static var previews: some View {
-            SwiftUIView()
+            FirstView()
         }
     }

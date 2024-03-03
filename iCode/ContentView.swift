@@ -19,7 +19,7 @@ struct ContentView: View {
             .tabItem {
                     Label("Snippets", systemImage: "list.bullet")
                 }
-            BrowserView(url: $selectedURL, searchText: $searchText )
+            FirstView()
             .tabItem {
                     Label("iCoder", systemImage: "globe")
             }
