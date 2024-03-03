@@ -9,7 +9,7 @@ Pre-release.
 Introducing iCode iCoder, the premier AI assistant designed for MacOS.  
 iCode and iCoder is designed for power-users seeking unparalleled efficiency and reliability in their coding environment. 
 Melds with established workflows with a native and natural interface coded in pure Swift -with minimal, standard, Objective-C functions.   
-iCode iCoder strictly follows Apple's guidelines and recommended practices for a seamless and secure experience with no external libraries nor frameworks, requires no privilege, is free of javascript.
+iCode iCoder strictly follows Apple's guidelines and recommended practices for a seamless and secure experience with no external libraries nor frameworks, requires no privilege, and is free of javascript.
 
 ## Core Features
 
@@ -22,8 +22,8 @@ iCode iCoder strictly follows Apple's guidelines and recommended practices for a
 
 ## Future-Proof Your Coding Experience
 
-iCode iCoder is in continuous development, with a commitment to staying at the forefront of technological advancements.  
-In the near future, we plan to introduce the ability to add your own features through plugins and extension points. This will open up a new realm of customization, allowing you to tailor iCode to your specific needs and preferences. 
+iCode iCoder is in continuous development, with a commitment to staying at the forefront of technological advancements. 
+In the near future, we plan to introduce the ability to add your own features through plugins and extension points. This will open up a new realm of customization, allowing you to tailor iCode to your specific needs and preferences, without enforcing a compromise of our own to the _does one thing good_ tradition. 
 Meanwhile, any feature request is welcome, any feature offer as well, can paste directly code in discussion or issues if you prefer rather than a pull request.
 
 ## Elevate Your Workflow
