@@ -3,12 +3,21 @@ import SwiftUI
 
 @main
 struct iCodeApp: App {
-    @State private var selectedURL = URL(string: "https://chat.openai.com")! // Initialize with a default URL
+    @AppStorage("selectedURL") var selectedURLString: String = "https://chat.openai.com"
+    @AppStorage("appearanceMode") var appearanceMode = "Dark"
+
 
     var body: some Scene {
         WindowGroup {
-            ContentView(selectedURL: $selectedURL)
-        }
+            ContentView()
+        
+        .onAppear {
+            if appearanceMode == "Dark" {
+                NSApp.appearance = NSAppearance(named: .darkAqua)
+            } else {
+                NSApp.appearance = NSAppearance(named: .aqua)
+            }
+        }}
         .commands {
             CommandGroup(after: .textEditing) {
                     Button("Find... ") {

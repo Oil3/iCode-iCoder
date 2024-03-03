@@ -8,6 +8,14 @@ import Foundation
 import WebKit
 
 class FloatingController: NSWindowController, NSWindowDelegate {
+    var selectedURL: URL {
+        let urlString = UserDefaults.standard.string(forKey: "selectedURL") ?? "https://chat.openai.com"
+        return URL(string: urlString)!
+    }
+    var windowTransparency: Double {
+        return UserDefaults.standard.double(forKey: "windowTransparency")
+    }
+    
     static let shared = FloatingController()
     public var floatingWindow: NSWindow?
     var titleBarButtons: TitleBarButtons? 

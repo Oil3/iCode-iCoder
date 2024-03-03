@@ -3,15 +3,15 @@ import SwiftUI
 import WebKit
 
 struct ContentView: View {
-    @Binding var selectedURL: URL // Now dynamic
-    @State private var searchText = ""
-    @State private var windowTransparency = 1.0
+    @AppStorage("selectedURL") var selectedURL: String = "https://chat.openai.com"
+    @AppStorage("windowTransparency") var windowTransparency: Double = 1.0
+//    @State private var windowTransparency = 1.0
 
 
     var body: some View {
     
         TabView {
-            DashboardView(selectedURL: $selectedURL, windowTransparency: $windowTransparency)
+            DashboardView()
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
