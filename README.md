@@ -3,8 +3,6 @@
   <h1 align="center">iCode iCoder: Seamless AI Assistant for MacOS</h1>
 </p>
 
-
-
 Pre-release. 
 Introducing iCode iCoder, the premier AI assistant designed for MacOS.  
 iCode and iCoder is designed for power-users seeking unparalleled efficiency and reliability in their coding environment. 
@@ -12,6 +10,7 @@ Melds with established workflows with a native and natural interface coded in pu
 iCode iCoder strictly follows Apple's guidelines and recommended practices for a seamless and secure experience with no external libraries nor frameworks, requires no privilege, and is free of javascript.
 
 ## Core Features
+<div align="justify">
 
 - 🍏 **Native macOS Integration**: Built entirely in Swift, iCode iCoder provides a flawless experience that harmonizes with Apple's design principles. It's an application that won't interfere with your usual workflow, leveraging the native shortcuts and behaviors you're accustomed to and such as cmd-tab, cmd-h, blends remarkably with how you like to work.
 - 🌐 **Universal AI Compatibility**: Whether you're a professional or not, iCode iCoder is your gateway to interacting with any AI model of your choice. It's designed to cater to exigent power-users, but is perfect for everyone as it has no learning curve, behaving just like any Apple app -toggable floating window on top.
@@ -19,6 +18,7 @@ iCode iCoder strictly follows Apple's guidelines and recommended practices for a
 - 🛡️ **Reliability in the Face of Adversity**: iCode iCoder maintains each view in its own process, separated from your browser and integrated development environment, reducing instability in a contingency plan against bugs and crashes, ensuring that it won't interrupt your workflow with technical glitches.
 - ✋ **Convenience at Your Fingertips**: The application boasts a configurable floating window, a native find/search capability sandboxed to not read external search fields (in the works: and a convenient note/snippet storage for organizing your code efficiently (planned: with colors)).
 - 🔑 **No API Key needed**: Access the full capabilities of iCode iCoder with your regular accounts, free or paid, from any provider for any model, immediatly with no learning curve.
+</div>
 
 ## Future-Proof Your Coding Experience
 
@@ -27,6 +27,8 @@ In the near future, we plan to introduce the ability to add your own features th
 Meanwhile, any feature request is welcome, any feature offer as well, can paste directly code in discussion or issues if you prefer rather than a pull request.
 
 ## Elevate Your Workflow
+<div align="justify">
+
 iCode iCoder is the quintessential tool for professionals seeking unparalleled efficiency and reliability in their coding environment.  
 Crafted in pure Swift with minimal Objective-C, iCode adheres strictly to Apple's recommended practices, ensuring a seamless and secure experience:
 
@@ -39,6 +41,7 @@ Crafted in pure Swift with minimal Objective-C, iCode adheres strictly to Apple'
 - 📖 **Transparent and Documented**: Documented codebase, free of the self-explanatory for easy review and clear auditing in less than 1000 lines of code. 
 
 With iCode iCoder, you can concentrate on your work with confidence: the tool is built with the aim to reduce cognitive friction and enhance productivity by reducing wtf/s.
+</div
 
 ## Screenshots
 
@@ -57,7 +60,7 @@ version 1.1 - mar022024
 Our app does not collect any private data.
 
 version 1.1 - mar022024  
-
+<div align="justify">
 <sub><sub>
 Before supporting us, give a coin to that old beggar you cross on the street, donate to Wikipedia or to Unesco, or... buy chromebooks for your nephews, give a bonus to your employees, get an umbrella for your cleaning lady, buy earrings for your mother, a usbc uberpowerful led flashlight for your dad, send flowers for your grandma, sportshoes for your grandpa, or something. In _Good_ we trust. </sub></sub>
-
+</div>
