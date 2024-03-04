@@ -19,8 +19,8 @@ class FloatingController: NSWindowController, NSWindowDelegate {
     static let shared = FloatingController()
     public var floatingWindow: NSWindow?
     var titleBarButtons: TitleBarButtons? 
-    var isTransparencyEnabled = false
     public var searchText: String = ""
+// //    ??osoccuper des links?var browserView: BrowserView?
 
 
 
@@ -32,7 +32,10 @@ class FloatingController: NSWindowController, NSWindowDelegate {
             webView.load(URLRequest(url: URL(string: "https://chat.openai.com")!))
             webView.allowsMagnification = true
             webView.allowsBackForwardNavigationGestures = true
-            webView.pageZoom = (0.9)
+            webView.pageZoom = (1)
+            webView.allowsLinkPreview = true
+          // // webView.drawPageBorder(with: NSSize??????????)
+         //  // ??webView.createPDF(completionHandler: <#T##(Result<Data, Error>) -> Void#>)
             webView.configuration.preferences.tabFocusesLinks = true
             
             let contentRect = NSRect(x: 1250, y: 400, width: 400, height: 647)

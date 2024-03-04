@@ -14,6 +14,7 @@ struct DashboardView: View {
         VStack {
             Section(header: Text("Quick Start")) {
                 Text("""
+                AI platform selection/input in the settings, default openAI.
                 Launch iCoder from title bar, log-in. 
                 Shift+Return makes new line and Cmd+Return sends prompt.
                 Cmd+H hides app and floating windows, Cmd+Shift+H hides all other apps, also works from most apps such as Xcode.
@@ -47,7 +48,7 @@ struct DashboardView: View {
             
             Slider(value: $windowTransparency, in: 0.1...1.0, step: 0.1) 
                 .frame(width: 200)
-            Text("Transparency: \(Int(windowTransparency * 100))%")
+            Text("Transparency: \(Int((1-windowTransparency) * 100))%")
                 
             Button("Clear Cookies") {
                 WebDataCleaner.clearCookies {
@@ -60,10 +61,10 @@ struct DashboardView: View {
                     }
                 }
                 .padding(.top, 5) // Add padding for visual separation
-            }
-            Section(header: Text("About")) {
-                Text("App version: 1.0.0")
-            }
+            
+            Text("About")
+            Text("App version: 1.0.0")
+            
         }
-
+}
 }

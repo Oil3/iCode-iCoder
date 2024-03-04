@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7209FFBA2B93DFED00E75FA2 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7209FFB92B93DFED00E75FA2 /* FirstView.swift */; };
+		72238FE12B95B1AD006D0B5E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 7214723C2B9579C70063268B /* PrivacyInfo.xcprivacy */; };
 		728DDE152B8169AD00CA98DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 728DDE142B8169AD00CA98DA /* Assets.xcassets */; };
 		72999F1C2B9069C300019082 /* TitleBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72999F1B2B9069C300019082 /* TitleBarButtons.swift */; };
 		72B0B7372B826DB300B1F68B /* BrowserContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B0B7362B826DB300B1F68B /* BrowserContainerView.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		7209FFB92B93DFED00E75FA2 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		7214723C2B9579C70063268B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		728DDE0B2B8169AC00CA98DA /* iCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		728DDE142B8169AD00CA98DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		728DDE162B8169AD00CA98DA /* iCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = iCode.entitlements; path = iCode/iCode.entitlements; sourceTree = SOURCE_ROOT; };
@@ -57,9 +59,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72238FE22B95B3B4006D0B5E /* Privacy */ = {
+			isa = PBXGroup;
+			children = (
+				72238FE32B95B3C6006D0B5E /* PrivacyInfo */,
+			);
+			path = Privacy;
+			sourceTree = "<group>";
+		};
+		72238FE32B95B3C6006D0B5E /* PrivacyInfo */ = {
+			isa = PBXGroup;
+			children = (
+				7214723C2B9579C70063268B /* PrivacyInfo.xcprivacy */,
+			);
+			path = PrivacyInfo;
+			sourceTree = "<group>";
+		};
 		728DDE022B8169AC00CA98DA = {
 			isa = PBXGroup;
 			children = (
+				72238FE22B95B3B4006D0B5E /* Privacy */,
 				728DDE0D2B8169AC00CA98DA /* iCode */,
 				728DDE0C2B8169AC00CA98DA /* Products */,
 				72BF16BF2B817B8E0032B334 /* Frameworks */,
@@ -163,6 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72238FE12B95B1AD006D0B5E /* PrivacyInfo.xcprivacy in Resources */,
 				728DDE152B8169AD00CA98DA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,7 +345,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "iCode iCoder";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "2024 © Quet Almahdi Morris";
-				INFOPLIST_KEY_NSMainNibFile = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -334,8 +353,6 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -368,7 +385,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "iCode iCoder";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "2024 © Quet Almahdi Morris";
-				INFOPLIST_KEY_NSMainNibFile = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -377,8 +393,6 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
