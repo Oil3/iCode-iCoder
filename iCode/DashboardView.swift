@@ -13,12 +13,20 @@ struct DashboardView: View {
     
         VStack {
             Section(header: Text("Quick Start")) {
-                Text("Launch iCoder from title bar, log-in. Shift+Return makes new line, Cmd+Return sends prompt, Cmd+H hides app and floating window, Cmd+Shift+H hides all other apps (also works from other apps such as Xcode), toggle transparency and float window on top of other windows from the title bar of the AI Assistant. ")
+                Text("""
+                Launch iCoder from title bar, log-in. 
+                Shift+Return makes new line and Cmd+Return sends prompt.
+                Cmd+H hides app and floating windows, Cmd+Shift+H hides all other apps, also works from most apps such as Xcode.
+                Toggle transparency from iCoder's title bar slider.
+                Pin the window on top of other windows from iCoder's title bar button
+""")
             }
+            .frame(width: 350)
             Picker("Appearance Mode", selection: $appearanceMode) {
                 Text("Dark").tag("Dark")
                 Text("Light").tag("Light")
             }
+            .frame(width: 200)
             .pickerStyle(SegmentedPickerStyle())
             .onChange(of: appearanceMode) { newValue, _ in
                 if newValue == "Dark" {

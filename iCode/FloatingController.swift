@@ -64,11 +64,10 @@ class FloatingController: NSWindowController, NSWindowDelegate {
         if let window = floatingWindow {
             window.level = (window.level == .floating) ? .normal : .floating
 }}
-    func toggleTransparency() {
-        isTransparencyEnabled.toggle() //this started as autohide but it was a mess, the alpha levels need be configurable, and with option to back to 1.0 on mouse hover
-        floatingWindow?.animator().alphaValue = isTransparencyEnabled ? 0.5 : 1.0
-        titleBarButtons?.updateButtonAppearance() 
+    func updateWindowTransparency(to newValue: Double) {
+        floatingWindow?.animator().alphaValue = newValue
     }
+    
     func performSearch(with searchText: String) {
         guard let webView = floatingWindow?.contentView as? WKWebView else { return }
         if !searchText.isEmpty {

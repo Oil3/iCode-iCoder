@@ -9,19 +9,18 @@ struct ContentView: View {
 
 
     var body: some View {
-    
         TabView {
-            DashboardView()
+            FirstView()
                 .tabItem {
-                    Label("Settings", systemImage: "gear")
+                    Label("iCoder", systemImage: "globe")
                 }
             SnippetView()
             .tabItem {
                     Label("Snippets", systemImage: "list.bullet")
                 }
-            FirstView()
+            DashboardView()
             .tabItem {
-                    Label("iCoder", systemImage: "globe")
+                    Label("Settings", systemImage: "gear")
             }
             .tabViewStyle(/*@START_MENU_TOKEN@*/DefaultTabViewStyle()/*@END_MENU_TOKEN@*/)
                     } 
@@ -29,11 +28,13 @@ struct ContentView: View {
         .toolbar {
             ToolbarItem(placement: .automatic) {
                 Button(action: {
-                        // Open the window when the button is clicked
+                        // Opens the floating window which is the principal window of the app
                     FloatingController.shared.showFloatingWindow()                    }) {
-                        Text("Launch iCoder assistant")
-                    }   
+                        Text("iCoder")
+                    }
+                    .help("Launch iCoder - AI Assistant")
                 }
-  }          }
+  }
+}
             
         }
